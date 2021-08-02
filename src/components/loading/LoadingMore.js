@@ -1,14 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Feather } from '@expo/vector-icons';
+import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 import Colors from '../../styles/colors';
 
-export default function LoadingMore({state}){
-	if(!state) return null;
+export default function LoadingMore(){
 	return (
 		<View style={styles.container}>
-			<Feather name="loader" color={Colors.DARKGRAY} size={20} />
-			<Text style={styles.text}>Loading more...</Text>
+			<ActivityIndicator size="small" color={Colors.SECONDARY} />
+			<Text style={styles.text}>Carregando...</Text>
 		</View>
 	);
 }

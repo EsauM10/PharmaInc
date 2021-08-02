@@ -36,7 +36,7 @@ export default function HomeScreen(){
 					keyExtractor={(item) => item.email}
 					onEndReached={fetchUsers}
 					onEndReachedThreshold={0.1}
-					ListFooterComponent={<LoadingMore state={loading} />}
+					ListFooterComponent={loading && <LoadingMore />}
 				/>
 			</View>
 		</View>
