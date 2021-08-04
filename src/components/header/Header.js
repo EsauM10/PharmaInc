@@ -7,7 +7,7 @@ import Button from '../button/Button';
 
 
 
-export default function Header({title}){
+export default function Header({title, inputChangeText}){
     const icon = <Feather name="filter" color="#fff" size={25} />
 
     return (
@@ -17,11 +17,11 @@ export default function Header({title}){
             <View style={styles.searchBar}>
 
                 <View style={styles.inputWrapper}>
-                    <TextInput placeholder="Pesquisar usuário" style={styles.textInput}/>
+                    <TextInput placeholder="Pesquisar usuário" style={styles.textInput} onChangeText={inputChangeText}/>
                 </View>
 
                 <View style={styles.buttonWrapper}>
-                    <Button icon={icon}/>
+                    <Button icon={icon} />
                 </View>
 
             </View>
