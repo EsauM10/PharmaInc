@@ -9,7 +9,9 @@ import LoadingMore from '../components/loading/LoadingMore';
 
 
 function filterUsers(data, text){
-	return (text=="") ? data : data.filter((user) => (user.name.first.includes(text)));
+	return (text=="") ? data : data.filter((user) => (
+		user.name.first.startsWith(text) ||	user.name.first.toLowerCase().startsWith(text)
+	));
 }
 
 export default function HomeScreen(){
